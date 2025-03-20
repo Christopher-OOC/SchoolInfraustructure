@@ -62,4 +62,15 @@ public class Parent {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    @Override
+    public String toString() {
+        return "Parent{" +
+                "parentId=" + parentId +
+                ", parentName='" + parentName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
 }

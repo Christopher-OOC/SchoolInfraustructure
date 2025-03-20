@@ -6,6 +6,7 @@ public class Student {
     private String stuentName;
     private Term currentTerm;
     private Parent parent;
+    private double outstandingBalance;
 
     public Student() {
     }
@@ -40,5 +41,13 @@ public class Student {
 
     public void setParent(Parent parent) {
         this.parent = parent;
+    }
+
+    public double getOutstandingBalance() {
+        return outstandingBalance;
+    }
+
+    public void setOutstandingBalance(double outstandingBalance) {
+        this.outstandingBalance = outstandingBalance;
     }
 }
