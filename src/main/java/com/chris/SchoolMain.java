@@ -2,7 +2,6 @@ package com.chris;
 
 import com.chris.exceptioons.PasswordNotCorrectException;
 import com.chris.exceptioons.UserNotFoundException;
-
 import java.util.Scanner;
 
 public class SchoolMain {
@@ -64,7 +63,6 @@ public class SchoolMain {
                     catch (UserNotFoundException ex) {
                         System.out.print(ex.getMessage());
                     }
-
                     break;
                 }
                 case 4 : {
@@ -77,11 +75,11 @@ public class SchoolMain {
                     System.out.println("Enter -1 to exit");
                     System.out.print("Enter any option: ");
                     option = scanner.nextInt();
-
                     break;
                 }
                 case 5 : {
                     school.login();
+                    break;
                 }
 
                 default : {
