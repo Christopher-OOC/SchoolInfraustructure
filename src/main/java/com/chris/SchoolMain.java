@@ -2,6 +2,8 @@ package com.chris;
 
 import com.chris.exceptioons.PasswordNotCorrectException;
 import com.chris.exceptioons.UserNotFoundException;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SchoolMain {
@@ -9,19 +11,30 @@ public class SchoolMain {
         Scanner scanner = new Scanner(System.in);
         School school = new School();
 
-        System.out.println("Welcome to Schooling International");
-        System.out.println();
-        System.out.println("Enter 1 for sign up");
-        System.out.println("Enter 2 for enquiry");
-        System.out.println("Enter -1 to exit");
-
-        System.out.print("Enter any option: ");
-        int option = scanner.nextInt();
+        int option = 0;
+        boolean cont = false;
+        do {
+            try {
+                System.out.println("Welcome to Schooling International");
+                System.out.println();
+                System.out.println("Enter 1 for sign up");
+                System.out.println("Enter 2 for enquiry");
+                System.out.println("Enter -1 to exit");
+                scanner.nextLine();
+                System.out.print("Enter any option: ");
+                option = scanner.nextInt();
+            }
+            catch (Exception ex) {
+                System.out.println("Please select correct option!");
+                cont = true;
+            }
+        } while (cont == true);
 
         do {
             switch (option) {
                 // Sign up
                 case 1 : {
+
                     school.createAccount();
                     System.out.println("Account creating...");
                     Thread.sleep(1000);
